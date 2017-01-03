@@ -1,4 +1,5 @@
-﻿using FirstFloor.ModernUI.Windows.Controls;
+﻿using deneme.Pages.Settings;
+using FirstFloor.ModernUI.Windows.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,10 @@ namespace deneme
         public MainWindow()
         {
             InitializeComponent();
+           this.MenuLinkGroups.Clear();
+            AppearanceViewModel gizle = new AppearanceViewModel();
+            gizle.SelectedTheme = gizle.Themes[0];
+            gizle.SelectedAccentColor = gizle.AccentColors[3];
         }
     }
 }

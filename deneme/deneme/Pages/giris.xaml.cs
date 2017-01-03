@@ -23,6 +23,16 @@ namespace deneme.Pages
         public giris()
         {
             InitializeComponent();
+            deneme.Items.Add("bmw");
+            deneme.Items.Add("audi");
+            deneme.Items.Add("honda");
+            deneme.Items.Add("mercedes");
+        }
+
+        private void deneme_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+         
+
         }
     }
 }

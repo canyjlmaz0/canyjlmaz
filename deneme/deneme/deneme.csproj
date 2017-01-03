@@ -98,6 +98,7 @@
     <Compile Include="Pages\kirala.xaml.cs">
       <DependentUpon>kirala.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MySqlConnection.cs" />
     <Compile Include="Pages\Settings\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>

@@ -4,9 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Style="{StaticResource ContentRoot}">
-        <Button>deneme</Button>
+             mc:Ignorable="d" d:DesignWidth="300" Height="436.255">
+    <Grid Style="{StaticResource ContentRoot}" Margin="16,28,16,223">
+
+
+
+        <ComboBox Name="deneme" Height="20" Margin="0,0,0,165" SelectionChanged="deneme_SelectionChanged">deneme</ComboBox>
+        <DataGrid Background="Red" Margin="0,176,0,-198"/>
+        <Button Background="Bisque" x:Name="button" Content="Button" HorizontalAlignment="Left" Height="45" Margin="8,76,0,0" VerticalAlignment="Top" Width="250"/>
+
     </Grid>
 </UserControl>
