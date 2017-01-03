@@ -36,9 +36,25 @@ namespace deneme.Pages
                 // giriş sayfasından digerine gönderme  
                 FirstFloor.ModernUI.Presentation.LinkGroup menuler = new FirstFloor.ModernUI.Presentation.LinkGroup();
                 FirstFloor.ModernUI.Presentation.Link menuekle = new FirstFloor.ModernUI.Presentation.Link();
-                menuekle.DisplayName = "araç seç";
+                menuekle.DisplayName = "ARAÇ KİRALA";
                 menuekle.Source = new Uri("Pages/giris.xaml", UriKind.Relative);
                 menuler.Links.Add(menuekle);
+
+
+                FirstFloor.ModernUI.Presentation.Link ekle = new FirstFloor.ModernUI.Presentation.Link();
+                ekle.DisplayName = " ARAÇ EKLE";
+                ekle.Source = new Uri("Pages/ekle.xaml", UriKind.Relative);
+                menuler.Links.Add(ekle);
+
+                FirstFloor.ModernUI.Presentation.Link sil = new FirstFloor.ModernUI.Presentation.Link();
+                sil.DisplayName = " ARAÇ SİL";
+                sil.Source = new Uri("Pages/sil.xaml", UriKind.Relative);
+                menuler.Links.Add(sil);
+
+
+
+
+
                 MainWindow ab = Application.Current.MainWindow as MainWindow;
                 ab.MenuLinkGroups.Clear();
                 ab.MenuLinkGroups.Add(menuler);

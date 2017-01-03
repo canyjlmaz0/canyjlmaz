@@ -27,12 +27,40 @@ namespace deneme.Pages
             deneme.Items.Add("audi");
             deneme.Items.Add("honda");
             deneme.Items.Add("mercedes");
+
+
+
+
         }
 
         private void deneme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
          
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FirstFloor.ModernUI.Presentation.LinkGroup menuler = new FirstFloor.ModernUI.Presentation.LinkGroup();
+
+            FirstFloor.ModernUI.Presentation.Link kirala = new FirstFloor.ModernUI.Presentation.Link();
+            kirala.DisplayName = "KİRALA";
+            kirala.Source = new Uri("Pages/kirala.xaml", UriKind.Relative);
+            menuler.Links.Add(kirala);
+
+            FirstFloor.ModernUI.Presentation.Link ekle = new FirstFloor.ModernUI.Presentation.Link();
+            ekle.DisplayName = " ARAÇ EKLE";
+            ekle.Source = new Uri("Pages/ekle.xaml", UriKind.Relative);
+            menuler.Links.Add(ekle);
+
+            FirstFloor.ModernUI.Presentation.Link sil = new FirstFloor.ModernUI.Presentation.Link();
+            sil.DisplayName = " ARAÇ SİL";
+            sil.Source = new Uri("Pages/sil.xaml", UriKind.Relative);
+            menuler.Links.Add(sil);
+
+            MainWindow ab = Application.Current.MainWindow as MainWindow;
+            ab.MenuLinkGroups.Clear();
+            ab.MenuLinkGroups.Add(menuler);
         }
     }
 }

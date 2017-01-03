@@ -5,13 +5,58 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer>
-            <StackPanel MinWidth="200">
-                <TextBlock Text="kiralama sayfası" Style="{StaticResource Heading2}" />
-                <TextBlock Text="Content goes here" />
-            </StackPanel>
-        </ScrollViewer>
+             d:DesignHeight="500" d:DesignWidth="300">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" Margin="0,10,0,0">SERİ NO :</Label>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="0,10,0,0">MARKA :</Label>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,0,0">MODEL :</Label>
+        <Label Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="0,10,0,0">RENK :</Label>
+        <Label Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" Margin="0,10,0,0">YIL :</Label>
+        <Label Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right" Margin="0,10,0,0">SATIM TARİHİ :</Label>
+        <Label Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" Margin="0,10,0,0">TESLİM TARİHİ :</Label>
+        <Label Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" Margin="0,10,0,0">KİRA GÜNÜ :</Label>
+        <Label Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right" Margin="0,10,0,0">AD :</Label>
+        <Label Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right" Margin="0,10,0,0">SOYAD :</Label>
+        <Label Grid.Column="0" Grid.Row="10" HorizontalAlignment="Right" Margin="0,10,0,0">ADRES :</Label>
+        <Label Grid.Column="0" Grid.Row="11" HorizontalAlignment="Right" Margin="0,10,0,0">NUMARA :</Label>
+        <Label Grid.Column="0" Grid.Row="12" HorizontalAlignment="Right" Margin="0,10,0,0">TC NO :</Label>
+        
+
+        <TextBox Grid.Column="1" Grid.Row="0" Name="txtserino" Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="1" Name="txtmarka"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="txtmodel"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="txtrenk"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="txtyil"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="5" Name="txtsatimtarih"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="6" Name="txtteslimtarih"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="7" Name="txtgün"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="8" Name="txtad"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="9" Name="txtsoyad"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="10" Name="txtadres"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="11" Name="txtno"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="12" Name="txttc"  Margin="150,10,0,0"></TextBox>
+        <Button Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" Margin="5" Background="Bisque">kirala tamamla</Button>
+
     </Grid>
 </UserControl>
