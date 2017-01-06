@@ -14,6 +14,12 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
 using System.Data;
+using MySql.Data.MySqlClient;
+
+
+
+
+
 
 
 namespace deneme.Pages
@@ -21,17 +27,28 @@ namespace deneme.Pages
     /// <summary>
     /// Interaction logic for Home.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class Home : UserControl 
+
     {
-        
+       
+       public  MySqlConnection bag = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
+       public   MySqlConnection bag2 = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
+
         public Home()
-        {
-            InitializeComponent();
-        }
-        giris a = new giris();
+        {            InitializeComponent();        }
+       giris a = new giris();
         private void button_Click(object sender, RoutedEventArgs e)
-        {
-            if (kad.Text == "can" && sifre.Text == "123")
+        {   bag.Open();
+            bag2.Open();
+          
+            MySqlCommand girisyap = new MySqlCommand("Select * from kullanicilar where ad='" + kad.Text+ "' and sifre = '" + sifre.Password.ToString() + "'", bag);
+            MySqlDataReader reader = girisyap.ExecuteReader();
+            MySqlCommand giris = new MySqlCommand("INSER INTo giris(ad) values('" + kad.Text + "'))", bag2);
+            giris.ExecuteNonQuery();
+            giris.Dispose();
+            bag2.Close();
+
+            if (kad.Text == "can" && sifre.Password == "123")
             {
                 // giriş sayfasından digerine gönderme  
                 FirstFloor.ModernUI.Presentation.LinkGroup menuler = new FirstFloor.ModernUI.Presentation.LinkGroup();
@@ -52,12 +69,10 @@ namespace deneme.Pages
                 menuler.Links.Add(sil);
 
 
-
-
-
                 MainWindow ab = Application.Current.MainWindow as MainWindow;
                 ab.MenuLinkGroups.Clear();
                 ab.MenuLinkGroups.Add(menuler);
+                bag.Close();
                 //--------------------------------------
             }
             else {

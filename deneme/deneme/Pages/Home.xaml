@@ -10,7 +10,7 @@
             <StackPanel MinWidth="200">
 
             <TextBox x:Name="kad" Height="23" TextWrapping="Wrap" Margin="0,10"/>
-            <TextBox x:Name="sifre" Height="23" TextWrapping="Wrap" Margin="0,10"/>
+            <PasswordBox x:Name="sifre" Height="23"  Margin="0,10"/>
             <Button x:Name="button" Content="Button" Width="76" Margin="96,110" Click="button_Click"/>
         </StackPanel>
        

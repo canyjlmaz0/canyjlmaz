@@ -27,12 +27,7 @@ namespace deneme.Pages
             deneme.Items.Add("audi");
             deneme.Items.Add("honda");
             deneme.Items.Add("mercedes");
-
-
-
-
         }
-
         private void deneme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
          
