@@ -16,12 +16,6 @@ using System.Drawing;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-
-
-
-
-
-
 namespace deneme.Pages
 {
     /// <summary>
@@ -31,8 +25,8 @@ namespace deneme.Pages
 
     {
        
-       public  MySqlConnection bag = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
-       public   MySqlConnection bag2 = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
+         MySqlConnection bag = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
+          MySqlConnection bag2 = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
 
         public Home()
         {            InitializeComponent();        }
