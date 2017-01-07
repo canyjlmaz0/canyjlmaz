@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,10 @@ namespace deneme.Pages
     /// </summary>
     public partial class giris : UserControl
     {
+      static  string baglanti = "Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;";
+
+        MySqlConnection bag = new MySqlConnection(baglanti);
+
         public giris()
         {
             InitializeComponent();
@@ -27,11 +33,23 @@ namespace deneme.Pages
             deneme.Items.Add("audi");
             deneme.Items.Add("honda");
             deneme.Items.Add("mercedes");
+            deneme.Items.Add("nissan");
+            deneme.Items.Add("tofaş");
+
         }
         private void deneme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-         
+            VeriGoster();  
+        }
 
+        private void VeriGoster()
+        {
+            
+            MySqlCommand goster = new MySqlCommand("Select id,marka,model,renk,yil,fiyat,satimtarih,teslimtarih,gün,m_ad,m_soyad,m_adres,m_no,m_tc from galari where marka='" + deneme.SelectedItem + "'", bag);
+            MySqlDataAdapter ad = new MySqlDataAdapter(goster);
+            DataTable ta = new DataTable();
+            ad.Fill(ta);
+            datagrid.ItemsSource = ta.AsDataView();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -59,3 +77,4 @@ namespace deneme.Pages
         }
     }
 }
+
