@@ -25,8 +25,8 @@ namespace deneme.Pages
 
     {
        
-         MySqlConnection bag = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
-          MySqlConnection bag2 = new MySqlConnection("Server = localhost; Database = kisiler; Uid = root; Pwd=;");
+         MySqlConnection bag = new MySqlConnection("Server =localhost; Data Source=localhost; Database =veritabani/kisiler; Uid = root; Pwd=;");
+          MySqlConnection bag2 = new MySqlConnection("Server =localhost; Database =veritabani/kisiler; Uid = root; Pwd=;");
 
         public Home()
         {            InitializeComponent();        }
