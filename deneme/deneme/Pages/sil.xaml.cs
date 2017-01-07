@@ -23,7 +23,7 @@ namespace deneme.Pages
     /// </summary>
     public partial class sil : UserControl
     {
-        MySqlConnection bagekle = new MySqlConnection("Server = localhost; DataSoruce=galari.sql; Database = galari; Uid = root; Pwd=;");
+        
         public sil()
         {
             InitializeComponent();
@@ -32,12 +32,12 @@ namespace deneme.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
            
-            bagekle.Open();
-            MySqlCommand sil = new MySqlCommand("delete from galari where id='" + txtsil.Text + "'", bagekle);
-            MySqlDataAdapter adabtor2 = new MySqlDataAdapter(sil);
-            sil.ExecuteNonQuery();
-            sil.Dispose();
-            bagekle.Close();
+            //bagekle.Open();
+            //MySqlCommand sil = new MySqlCommand("delete from galari where id='" + txtsil.Text + "'", bagekle);
+            //MySqlDataAdapter adabtor2 = new MySqlDataAdapter(sil);
+            //sil.ExecuteNonQuery();
+            //sil.Dispose();
+            //bagekle.Close();
             
         }
     }

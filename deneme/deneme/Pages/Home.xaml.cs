@@ -26,23 +26,26 @@ namespace deneme.Pages
 
     {
 
-        //MySqlConnection bag = new MySqlConnection("SERVER=localhost;Port=3455;Database=galari; UID = root;PWD=;");
-        //MySqlConnection bag = new MySqlConnection("Server = localhost; Database =galari; Uid = root; Pwd=;");
-        MySqlConnection bag = new MySqlConnection("Server=localhost;Port=3306;Database=galari;Uid=root;Pwd=;Encrypt=false;AllowUserVariables=True;UseCompression=True;");
+        //  MySqlConnection bag = new MySqlConnection("SERVER=localhost;Port=3455;Database=galari; UID = root;PWD='';");
+        // MySqlConnection bag = new MySqlConnection("Server = localhost; Database=galari; Uid = root; Pwd='';");
+        // MySqlConnection bag = new MySqlConnection("Server=localhost;Port=3306;Database=galari;Uid=root;Pwd=;Encrypt=false;AllowUserVariables=True;UseCompression=True;");
 
-
-        MySqlConnection bag2 = new MySqlConnection("Server =localhost; Database =galari; Uid = root; Pwd=;");
-
+        string baglanti = "Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;";
+        
+       
         public Home()
         {            InitializeComponent();        }
        giris a = new giris();
         private void button_Click(object sender, RoutedEventArgs e)
-        {   bag.Open();
+        {
+            MySqlConnection bag = new MySqlConnection(baglanti);
+            MySqlConnection bag2 = new MySqlConnection(baglanti);
+            bag.Open();
             bag2.Open();
 
             MySqlCommand girisyap = new MySqlCommand("Select * from kullanicilar where ad='" + kad.Text + "' and sifre = '" + sifre.Password.ToString() + "'", bag);
             MySqlDataReader reader = girisyap.ExecuteReader();
-            MySqlCommand giris = new MySqlCommand("INSER INTo giris(ad) values('" + kad.Text + "'))", bag2);
+            MySqlCommand giris = new MySqlCommand("INSERT INTO kullanicilar(ad) values('" + kad.Text + "')", bag2);
             giris.ExecuteNonQuery();
             giris.Dispose();
             bag2.Close();
@@ -71,7 +74,7 @@ namespace deneme.Pages
                 MainWindow ab = Application.Current.MainWindow as MainWindow;
                 ab.MenuLinkGroups.Clear();
                 ab.MenuLinkGroups.Add(menuler);
-                /*bag.Close()*/;
+                bag.Close();
                 //--------------------------------------
             }
             else {

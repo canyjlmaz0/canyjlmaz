@@ -25,13 +25,13 @@ namespace deneme.Pages
         public kirala()
         {
             InitializeComponent();
-            MySqlConnection bag = new MySqlConnection("Server = localhost; Database = galari; Uid = root; Pwd=;");
+            //MySqlConnection bag = new MySqlConnection("Server = localhost; Database = galari; Uid = root; Pwd=;");
 
-            bag.Open();
-            MySqlCommand ekle = new MySqlCommand("update galari set gün='"+txtgün.Text+"' , m_ad='"+txtad.Text+ "', m_soyad='"+txtsoyad.Text+ "', m_adres ='" + txtadres.Text + "' , m_no='" + txtno.Text + "',m_tc='" + txttc.Text + "' " ,bag);
-            ekle.ExecuteNonQuery();
-            ekle.Dispose();
-            bag.Close();
+            //bag.Open();
+            //MySqlCommand ekle = new MySqlCommand("update galari set gün='"+txtgün.Text+"' , m_ad='"+txtad.Text+ "', m_soyad='"+txtsoyad.Text+ "', m_adres ='" + txtadres.Text + "' , m_no='" + txtno.Text + "',m_tc='" + txttc.Text + "' " ,bag);
+            //ekle.ExecuteNonQuery();
+            //ekle.Dispose();
+            //bag.Close();
 
         }
     }

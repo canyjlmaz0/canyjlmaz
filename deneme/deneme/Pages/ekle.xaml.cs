@@ -23,7 +23,7 @@ namespace deneme.Pages
     public partial class ekle : UserControl
     {
         
-        MySqlConnection bagekle = new MySqlConnection("Server = localhost; Database = galari; Uid = root; Pwd=;");
+      //  MySqlConnection bagekle = new MySqlConnection("Server = localhost; Database = galari; Uid = root; Pwd=;");
         public ekle()
         {
             InitializeComponent();         
@@ -31,11 +31,11 @@ namespace deneme.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bagekle.Open();
-            MySqlCommand ekle = new MySqlCommand("INSERT INTO galari(marka,model,renk,yil,fiyat) VALUES ('" + txteklemarka.Text + "','" + txteklemodel.Text + "','" + txteklerenk.Text + "','" + txtekleyil.Text + "','" + txteklefiyat.Text + "')",bagekle );
-            ekle.ExecuteNonQuery();
-            ekle.Dispose();
-            bagekle.Close();
+            //bagekle.Open();
+            //MySqlCommand ekle = new MySqlCommand("INSERT INTO galari(marka,model,renk,yil,fiyat) VALUES ('" + txteklemarka.Text + "','" + txteklemodel.Text + "','" + txteklerenk.Text + "','" + txtekleyil.Text + "','" + txteklefiyat.Text + "')",bagekle );
+            //ekle.ExecuteNonQuery();
+            //ekle.Dispose();
+            //bagekle.Close();
         }
     }
 }
