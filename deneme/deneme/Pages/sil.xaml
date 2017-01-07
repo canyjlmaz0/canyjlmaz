@@ -15,6 +15,6 @@
 
         <Label HorizontalAlignment="Center" Margin="0,30" Grid.Row="0">silmek istediğiniz araç seri numarasını girin</Label>
         <TextBox Name="txtsil" Grid.Row="1" Margin="60" FontSize="30" Background="Gray"></TextBox>
-        <Button Background="red" Margin="40" Grid.Row="2"> SİLME İŞLEMİNİ TAMAMLA</Button>
+        <Button Background="red" Margin="40" Grid.Row="2" Click="Button_Click"> SİLME İŞLEMİNİ TAMAMLA</Button>
     </Grid>
 </UserControl>

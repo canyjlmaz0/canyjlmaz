@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace deneme.Pages
 {
@@ -20,9 +22,20 @@ namespace deneme.Pages
     /// </summary>
     public partial class ekle : UserControl
     {
+        
+        MySqlConnection bagekle = new MySqlConnection("Server = localhost; Database = galari; Uid = root; Pwd=;");
         public ekle()
         {
-            InitializeComponent();
+            InitializeComponent();         
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bagekle.Open();
+            MySqlCommand ekle = new MySqlCommand("INSERT INTO galari(marka,model,renk,yil,fiyat) VALUES ('" + txteklemarka.Text + "','" + txteklemodel.Text + "','" + txteklerenk.Text + "','" + txtekleyil.Text + "','" + txteklefiyat.Text + "')",bagekle );
+            ekle.ExecuteNonQuery();
+            ekle.Dispose();
+            bagekle.Close();
         }
     }
 }

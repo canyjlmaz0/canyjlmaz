@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Drawing;
 using System.Data;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace deneme.Pages
 {
@@ -24,9 +25,10 @@ namespace deneme.Pages
     public partial class Home : UserControl 
 
     {
-       
-         MySqlConnection bag = new MySqlConnection("Server =localhost; Data Source=localhost; Database =veritabani/kisiler; Uid = root; Pwd=;");
-          MySqlConnection bag2 = new MySqlConnection("Server =localhost; Database =veritabani/kisiler; Uid = root; Pwd=;");
+
+        //MySqlConnection bag = new MySqlConnection("SERVER=localhost;Port=3455;Database=galari; UID = root;PWD=;");
+        MySqlConnection bag = new MySqlConnection("Server = localhost; Database =galari; Uid = root; Pwd=;");
+        MySqlConnection bag2 = new MySqlConnection("Server =localhost; Database =galari; Uid = root; Pwd=;");
 
         public Home()
         {            InitializeComponent();        }
@@ -34,8 +36,8 @@ namespace deneme.Pages
         private void button_Click(object sender, RoutedEventArgs e)
         {   bag.Open();
             bag2.Open();
-          
-            MySqlCommand girisyap = new MySqlCommand("Select * from kullanicilar where ad='" + kad.Text+ "' and sifre = '" + sifre.Password.ToString() + "'", bag);
+
+            MySqlCommand girisyap = new MySqlCommand("Select * from kullanicilar where ad='" + kad.Text + "' and sifre = '" + sifre.Password.ToString() + "'", bag);
             MySqlDataReader reader = girisyap.ExecuteReader();
             MySqlCommand giris = new MySqlCommand("INSER INTo giris(ad) values('" + kad.Text + "'))", bag2);
             giris.ExecuteNonQuery();
@@ -66,7 +68,7 @@ namespace deneme.Pages
                 MainWindow ab = Application.Current.MainWindow as MainWindow;
                 ab.MenuLinkGroups.Clear();
                 ab.MenuLinkGroups.Add(menuler);
-                bag.Close();
+                /*bag.Close()*/;
                 //--------------------------------------
             }
             else {
