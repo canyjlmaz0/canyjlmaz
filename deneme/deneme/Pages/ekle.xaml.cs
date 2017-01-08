@@ -22,8 +22,8 @@ namespace deneme.Pages
     /// </summary>
     public partial class ekle : UserControl
     {
-        
-      //  MySqlConnection bagekle = new MySqlConnection("Server = localhost; Database = galari; Uid = root; Pwd=;");
+
+        MySqlConnection baglanti = new MySqlConnection("Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;");
         public ekle()
         {
             InitializeComponent();         
@@ -31,11 +31,13 @@ namespace deneme.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //bagekle.Open();
-            //MySqlCommand ekle = new MySqlCommand("INSERT INTO galari(marka,model,renk,yil,fiyat) VALUES ('" + txteklemarka.Text + "','" + txteklemodel.Text + "','" + txteklerenk.Text + "','" + txtekleyil.Text + "','" + txteklefiyat.Text + "')",bagekle );
-            //ekle.ExecuteNonQuery();
-            //ekle.Dispose();
-            //bagekle.Close();
+            
+            baglanti.Open();
+            MySqlCommand kirala = new MySqlCommand("INSERT INTO galari(marka,model,renk,yil,fiyat) values('"+txteklemarka.Text+"','"+txteklemodel.Text+"','"+txteklerenk.Text+"',"+txtekleyil.Text+","+txteklefiyat.Text+")",baglanti);
+            kirala.ExecuteNonQuery();
+            kirala.Dispose();
+            baglanti.Close();
+            MessageBox.Show("araç ekleme yapıldı");
         }
     }
 }

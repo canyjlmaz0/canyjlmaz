@@ -31,14 +31,18 @@ namespace deneme.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
            
-            //bagekle.Open();
-            //MySqlCommand sil = new MySqlCommand("delete from galari where id='" + txtsil.Text + "'", bagekle);
-            //MySqlDataAdapter adabtor2 = new MySqlDataAdapter(sil);
-            //sil.ExecuteNonQuery();
-            //sil.Dispose();
-            //bagekle.Close();
+            MySqlConnection baglanti = new MySqlConnection("Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;");
+            baglanti.Open();
             
+            MySqlCommand sil = new MySqlCommand("delete from galari where id='" + txtsil.Text + "'", baglanti);
+            MySqlDataAdapter adabtor2 = new MySqlDataAdapter(sil);
+            sil.ExecuteNonQuery();
+            sil.Dispose();
+
+            baglanti.Close();
+            MessageBox.Show("araç silindi.");
         }
     }
 }

@@ -26,9 +26,7 @@ namespace deneme.Pages
 
     {
 
-        //  MySqlConnection bag = new MySqlConnection("SERVER=localhost;Port=3455;Database=galari; UID = root;PWD='';");
-        // MySqlConnection bag = new MySqlConnection("Server = localhost; Database=galari; Uid = root; Pwd='';");
-        // MySqlConnection bag = new MySqlConnection("Server=localhost;Port=3306;Database=galari;Uid=root;Pwd=;Encrypt=false;AllowUserVariables=True;UseCompression=True;");
+       
 
         string baglanti = "Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;";
         
