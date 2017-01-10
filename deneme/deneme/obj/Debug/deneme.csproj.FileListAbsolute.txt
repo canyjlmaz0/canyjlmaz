@@ -60,3 +60,5 @@ C:\Users\can-y\Desktop\proje c#\canyjlmaz\deneme\deneme\obj\Debug\Pages\sil.g.cs
 C:\Users\can-y\Desktop\proje c#\canyjlmaz\deneme\deneme\obj\Debug\App.g.cs
 C:\Users\can-y\Desktop\proje c#\canyjlmaz\deneme\deneme\obj\Debug\deneme_MarkupCompile.cache
 C:\Users\can-y\Desktop\proje c#\canyjlmaz\deneme\deneme\obj\Debug\deneme.g.resources
+C:\Users\can-y\Desktop\proje c#\canyjlmaz\deneme\deneme\obj\Debug\Pages\teslimal.baml
+C:\Users\can-y\Desktop\proje c#\canyjlmaz\deneme\deneme\obj\Debug\Pages\teslimal.g.cs

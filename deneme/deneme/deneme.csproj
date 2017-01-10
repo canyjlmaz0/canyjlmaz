@@ -141,8 +141,15 @@
     <Compile Include="Pages\sil.xaml.cs">
       <DependentUpon>sil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\teslimal.xaml.cs">
+      <DependentUpon>teslimal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Page Include="Pages\sil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\teslimal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

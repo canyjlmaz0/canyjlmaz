@@ -32,13 +32,18 @@ namespace deneme.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)        {
 
-           
-            baglanti.Open();
-            MySqlCommand kirala = new MySqlCommand("UPDATE galari set  satimtarih='" + txtsatimtarih.Text + "', teslimtarih='" + txtteslimtarih.Text + "',gün=" + txtgün.Text + ",m_ad='" + txtad.Text + "',m_soyad='" + txtsoyad.Text + "',m_adres='" + txtadres.Text + "'  , m_no=" + txtno.Text + " , m_tc=" + txttc.Text + "  where id="+ txtserino.Text+ "",baglanti);
-            kirala.ExecuteNonQuery();
-            kirala.Dispose();
-            baglanti.Close();
-            MessageBox.Show("kiralama yapıldı");
+            try
+            {
+                baglanti.Open();
+                MySqlCommand kirala = new MySqlCommand("UPDATE galari set  satimtarih='" + txtsatimtarih.Text + "', teslimtarih='" + txtteslimtarih.Text + "',gün=" + txtgün.Text + ",m_ad='" + txtad.Text + "',m_soyad='" + txtsoyad.Text + "',m_adres='" + txtadres.Text + "'  , m_no=" + txtno.Text + " , m_tc=" + txttc.Text + "  where id=" + txtserino.Text + "", baglanti);
+                kirala.ExecuteNonQuery();
+                kirala.Dispose();
+                baglanti.Close();
+                MessageBox.Show("kiralama yapıldı");
+            }
+            catch {
+                MessageBox.Show("lütfen gerkeli yerleri doldurunuz.");
+            }
         }
     }
 }

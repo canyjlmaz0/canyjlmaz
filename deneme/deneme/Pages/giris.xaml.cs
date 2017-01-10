@@ -39,19 +39,24 @@ namespace deneme.Pages
         }
         private void deneme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            VeriGoster();  
+            try
+            {
+                MySqlCommand goster = new MySqlCommand("Select id,marka,model,renk,yil,fiyat,satimtarih,teslimtarih,gün,m_ad,m_soyad,m_adres,m_no,m_tc from galari where marka='" + deneme.SelectedItem + "'", bag);
+                MySqlDataAdapter ad = new MySqlDataAdapter(goster);
+                DataTable ta = new DataTable();
+                ad.Fill(ta);
+                datagrid.ItemsSource = ta.AsDataView();
+            }
+            catch {
+                MySqlCommand goster = new MySqlCommand("Select id,marka,model,renk,yil,fiyat,gün,m_ad,m_soyad,m_adres,m_no,m_tc from galari where marka='" + deneme.SelectedItem + "'", bag);
+                MySqlDataAdapter ad = new MySqlDataAdapter(goster);
+                DataTable ta = new DataTable();
+                ad.Fill(ta);
+                datagrid.ItemsSource = ta.AsDataView();
+            }
         }
 
-        private void VeriGoster()
-        {
-            
-            MySqlCommand goster = new MySqlCommand("Select id,marka,model,renk,yil,fiyat,satimtarih,teslimtarih,gün,m_ad,m_soyad,m_adres,m_no,m_tc from galari where marka='" + deneme.SelectedItem + "'", bag);
-            MySqlDataAdapter ad = new MySqlDataAdapter(goster);
-            DataTable ta = new DataTable();
-            ad.Fill(ta);
-            datagrid.ItemsSource = ta.AsDataView();
-        }
-
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             FirstFloor.ModernUI.Presentation.LinkGroup menuler = new FirstFloor.ModernUI.Presentation.LinkGroup();
@@ -74,6 +79,11 @@ namespace deneme.Pages
             MainWindow ab = Application.Current.MainWindow as MainWindow;
             ab.MenuLinkGroups.Clear();
             ab.MenuLinkGroups.Add(menuler);
+        }
+
+        private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }

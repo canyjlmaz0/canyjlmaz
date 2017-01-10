@@ -6,12 +6,19 @@
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" d:DesignWidth="300" Height="436.255">
     <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
 
 
 
-        <ComboBox Name="deneme" Height="20" Margin="8,34,-8,382" SelectionChanged="deneme_SelectionChanged">deneme</ComboBox>
-        <DataGrid Background="Aqua" Name="datagrid" Margin="0,176,0,-198"/>
-        <Button Content="kirala" Height="45"  Width="250" Margin="10,105,40,286" Click="Button_Click"/>
+        <ComboBox Name="deneme" Height="20"  SelectionChanged="deneme_SelectionChanged" Grid.Row="0"></ComboBox>
+        <DataGrid Background="DarkGray" Name="datagrid" Grid.Row="1" SelectionChanged="datagrid_SelectionChanged"/>
+        <Button Content="ARACI KİRALAMAK İÇİN TIKLAYIN" Height="45"  Width="250" Grid.Row="2"   Click="Button_Click"/>
+        <Label Name="LABEL1"  Grid.Row="4"  HorizontalAlignment="Center" > DENEME</Label>
 
     </Grid>
 </UserControl>

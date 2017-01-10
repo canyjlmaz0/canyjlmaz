@@ -32,8 +32,13 @@ namespace deneme.Pages
         
        
         public Home()
-        {            InitializeComponent();        }
-       giris a = new giris();
+        {            InitializeComponent();
+
+            Random rnd = new Random();
+           int randomsayi= rnd.Next(999, 9999);
+            txtrand.Text = randomsayi.ToString();
+        }
+         giris a = new giris();
         private void button_Click(object sender, RoutedEventArgs e)
         {
             MySqlConnection bag = new MySqlConnection(baglanti);
@@ -48,7 +53,7 @@ namespace deneme.Pages
             giris.Dispose();
             bag2.Close();
 
-            if (kad.Text == "can" && sifre.Password == "123")
+            if (kad.Text == "can" && sifre.Password == "123" && txtrand.Text==txtkod.Text )
             {
                 // giriş sayfasından digerine gönderme  
                 FirstFloor.ModernUI.Presentation.LinkGroup menuler = new FirstFloor.ModernUI.Presentation.LinkGroup();
@@ -68,6 +73,12 @@ namespace deneme.Pages
                 sil.Source = new Uri("Pages/sil.xaml", UriKind.Relative);
                 menuler.Links.Add(sil);
 
+                FirstFloor.ModernUI.Presentation.Link deneme = new FirstFloor.ModernUI.Presentation.Link();
+                deneme.DisplayName = " ARACI TESLİM AL";
+                deneme.Source = new Uri("Pages/teslimal.xaml", UriKind.Relative);
+                menuler.Links.Add(deneme);
+
+
 
                 MainWindow ab = Application.Current.MainWindow as MainWindow;
                 ab.MenuLinkGroups.Clear();
@@ -76,7 +87,13 @@ namespace deneme.Pages
                 //--------------------------------------
             }
             else {
-                MessageBox.Show("kullanıcı adı şifresi hatalı");
+                MessageBox.Show("kullanıcı adı , şifre  veya güvenlik kodu yanlış tekrar deneyin");
+                txtkod.Text = "";
+                kad.Text = "";
+                sifre.Password = "";
+                Random rnd = new Random();
+                int randomsayi = rnd.Next(999, 9999);
+                txtrand.Text = randomsayi.ToString();
             }
         }
     }
