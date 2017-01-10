@@ -85,17 +85,18 @@ namespace deneme.Pages
             ab.MenuLinkGroups.Clear();
             ab.MenuLinkGroups.Add(menuler);
         }
-        string stringad;
+        string sec;
 
         private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataRowView row = (DataRowView)datagrid.SelectedItems[0];
-            string sec = row["id"].ToString();
+            sec = row["id"].ToString();
             LABEL1.Content = sec.ToString();
             MessageBox.Show(sec);
 
 
         }
+        
     }
 }
 
