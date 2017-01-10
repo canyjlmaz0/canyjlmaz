@@ -27,6 +27,10 @@ namespace deneme.Pages
         public kirala()
         {
             InitializeComponent();
+            giris giris = new giris();
+            txtserino.Text = Convert.ToString(giris.sec);
+            txtserino.Text = giris.sec;
+            
 
         }
 

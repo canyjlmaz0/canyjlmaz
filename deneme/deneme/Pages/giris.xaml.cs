@@ -56,7 +56,28 @@ namespace deneme.Pages
             }
         }
 
+        public string sec;
+        public string gec;
         
+
+        private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataRowView row = (DataRowView)datagrid.SelectedItems[0];
+            sec = row["id"].ToString();
+            LABEL1.Content = sec.ToString();
+            MessageBox.Show(sec + " id numaralı aracı  seçtiniz");
+
+
+            kirala frm = new kirala();
+            frm.txtserino.Text = sec.ToString();
+
+            
+
+        }
+       
+        
+        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             FirstFloor.ModernUI.Presentation.LinkGroup menuler = new FirstFloor.ModernUI.Presentation.LinkGroup();
@@ -85,18 +106,13 @@ namespace deneme.Pages
             ab.MenuLinkGroups.Clear();
             ab.MenuLinkGroups.Add(menuler);
         }
-        string sec;
-
-        private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            DataRowView row = (DataRowView)datagrid.SelectedItems[0];
-            sec = row["id"].ToString();
-            LABEL1.Content = sec.ToString();
-            MessageBox.Show(sec);
-
-
-        }
         
+      
+       
+
+
+
+
     }
 }
 
