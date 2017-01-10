@@ -43,7 +43,7 @@ namespace deneme.Pages
             }
             catch
             {
-                MessageBox.Show("lütfen gerekli yerleri doldurunuz.");
+                MessageBox.Show(txtteslim.Text+" id li araba olmadığından teslim alınamadı");
             }
         }
     }

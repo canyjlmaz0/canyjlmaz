@@ -32,17 +32,22 @@ namespace deneme.Pages
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-           
-            MySqlConnection baglanti = new MySqlConnection("Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;");
-            baglanti.Open();
-            
-            MySqlCommand sil = new MySqlCommand("delete from galari where id='" + txtsil.Text + "'", baglanti);
-            MySqlDataAdapter adabtor2 = new MySqlDataAdapter(sil);
-            sil.ExecuteNonQuery();
-            sil.Dispose();
+            try
+            {
 
-            baglanti.Close();
-            MessageBox.Show("araç silindi.");
+
+                MySqlConnection baglanti = new MySqlConnection("Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;");
+                baglanti.Open();
+                MySqlCommand sil = new MySqlCommand("delete from galari where id='" + txtsil.Text + "'", baglanti);
+                MySqlDataAdapter adabtor2 = new MySqlDataAdapter(sil);
+                sil.ExecuteNonQuery();
+                sil.Dispose();
+                baglanti.Close();
+                MessageBox.Show("araç silindi.");
+            }
+            catch {
+                MessageBox.Show(txtsil.Text+" id numaralı araba yok ");
+            }
         }
     }
 }
