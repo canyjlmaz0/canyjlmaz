@@ -37,6 +37,8 @@ namespace deneme.Pages
             Random rnd = new Random();
            int randomsayi= rnd.Next(999, 9999);
             txtrand.Text = randomsayi.ToString();
+
+            
         }
          giris a = new giris();
         private void button_Click(object sender, RoutedEventArgs e)

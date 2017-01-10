@@ -18,7 +18,7 @@
         <ComboBox Name="deneme" Height="20"  SelectionChanged="deneme_SelectionChanged" Grid.Row="0"></ComboBox>
         <DataGrid Background="DarkGray" Name="datagrid" Grid.Row="1" SelectionChanged="datagrid_SelectionChanged"/>
         <Button Content="ARACI KİRALAMAK İÇİN TIKLAYIN" Height="45"  Width="250" Grid.Row="2"   Click="Button_Click"/>
-        <Label Name="LABEL1"  Grid.Row="4"  HorizontalAlignment="Center" > DENEME</Label>
+        
 
     </Grid>
 </UserControl>

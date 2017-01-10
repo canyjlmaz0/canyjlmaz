@@ -57,20 +57,19 @@ namespace deneme.Pages
         }
 
         public string sec;
-        public string gec;
+        
         
 
         private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DataRowView row = (DataRowView)datagrid.SelectedItems[0];
             sec = row["id"].ToString();
-            LABEL1.Content = sec.ToString();
             MessageBox.Show(sec + " id numaralı aracı  seçtiniz");
 
 
             kirala frm = new kirala();
             frm.txtserino.Text = sec.ToString();
-
+            //ordaki labeli sec değişkenine atıyom söyle yapıcan bak
             
 
         }

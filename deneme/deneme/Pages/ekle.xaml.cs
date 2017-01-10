@@ -31,6 +31,7 @@ namespace deneme.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            try {
             
             baglanti.Open();
             MySqlCommand kirala = new MySqlCommand("INSERT INTO galari(marka,model,renk,yil,fiyat) values('"+txteklemarka.Text+"','"+txteklemodel.Text+"','"+txteklerenk.Text+"',"+txtekleyil.Text+","+txteklefiyat.Text+")",baglanti);
@@ -38,6 +39,11 @@ namespace deneme.Pages
             kirala.Dispose();
             baglanti.Close();
             MessageBox.Show("araç ekleme yapıldı");
+             }
+            catch
+            {
+                MessageBox.Show("LÜTFEN VERİLERİ DÜZGÜN DOLDURUNUZ");
+            }
         }
     }
 }
