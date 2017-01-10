@@ -21,7 +21,7 @@ namespace deneme.Pages
     /// </summary>
     public partial class teslimal : UserControl
     {
-        MySqlConnection baglanti = new MySqlConnection("Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;");
+                MySqlConnection baglanti = new MySqlConnection("Server=localhost;Port=3306;Database=test;Uid=root;Pwd=;Convert Zero Datetime=True;Allow Zero Datetime=True;");
 
         public teslimal()
         {
@@ -30,18 +30,20 @@ namespace deneme.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            int sayi = 0;
+            string bos = "";
             try
             {
                 baglanti.Open();
-                MySqlCommand kirala = new MySqlCommand("UPDATE galari set  satimtarih='" + txtsatimtarih.Text + "', teslimtarih='" + txtteslimtarih.Text + "',gün=" + txtgün.Text + ",m_ad='" + txtad.Text + "',m_soyad='" + txtsoyad.Text + "',m_adres='" + txtadres.Text + "'  , m_no=" + txtno.Text + " , m_tc=" + txttc.Text + "  where id=" + txtserino.Text + "", baglanti);
+                MySqlCommand kirala = new MySqlCommand("UPDATE galari set  satimtarih='" + sayi + "', teslimtarih='" + sayi + "',gün=" + sayi + ",m_ad='" + bos.ToString() + "',m_soyad='" + bos.ToString()  +"', m_adres = '" + bos.ToString() + "'  , m_no=" + sayi + " , m_tc=" + sayi + "  where id=" + txtteslim.Text + "", baglanti);
                 kirala.ExecuteNonQuery();
                 kirala.Dispose();
                 baglanti.Close();
-                MessageBox.Show("kiralama yapıldı");
+                MessageBox.Show("araç teslim alma başarıyla yapıldı");
             }
             catch
             {
-                MessageBox.Show("lütfen gerkeli yerleri doldurunuz.");
+                MessageBox.Show("lütfen gerekli yerleri doldurunuz.");
             }
         }
     }

@@ -76,6 +76,11 @@ namespace deneme.Pages
             sil.Source = new Uri("Pages/sil.xaml", UriKind.Relative);
             menuler.Links.Add(sil);
 
+            FirstFloor.ModernUI.Presentation.Link deneme = new FirstFloor.ModernUI.Presentation.Link();
+            deneme.DisplayName = " ARACI TESLİM AL";
+            deneme.Source = new Uri("Pages/teslimal.xaml", UriKind.Relative);
+            menuler.Links.Add(deneme);
+
             MainWindow ab = Application.Current.MainWindow as MainWindow;
             ab.MenuLinkGroups.Clear();
             ab.MenuLinkGroups.Add(menuler);
@@ -83,7 +88,7 @@ namespace deneme.Pages
 
         private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            LABEL1.Content = datagrid.selected.rows[0].Cells[0].Value;
         }
     }
 }
