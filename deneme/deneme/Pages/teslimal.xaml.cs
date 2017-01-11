@@ -40,10 +40,12 @@ namespace deneme.Pages
                 TESLİMAL.Dispose();
                 baglanti.Close();
                 MessageBox.Show("araç teslim alma başarıyla yapıldı" , "TESLİM ALINDI");
+                txtteslim.Text = "";
             }
             catch
             {
                 MessageBox.Show(txtteslim.Text+" id li araba olmadığından teslim alınamadı" ,"ARAÇ VERİSİ EKSİK");
+                txtteslim.Text = "";
             }
         }
     }

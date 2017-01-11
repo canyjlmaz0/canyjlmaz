@@ -14,7 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Name="label1" Grid.Row="0" HorizontalAlignment="Center" FontSize="20">SECİLEN ARACIN İD Sİ OLUCAK</Label>
-        <TextBox Name="txtteslim" Grid.Row="1" Margin="20"></TextBox>
+        <TextBox Name="txtteslim" Grid.Row="1" Margin="20" FontSize="30" Background="Gray"></TextBox>
         <Button Grid.Row="2" Margin="20" Click="Button_Click"> ARACI TESLİM AL</Button>
         
     </Grid>

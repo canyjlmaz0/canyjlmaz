@@ -44,9 +44,11 @@ namespace deneme.Pages
                 sil.Dispose();
                 baglanti.Close();
                 MessageBox.Show("araç silindi." ,"SİLME İŞLEMİ TAMAMLANDI");
+                txtsil.Text = "";
             }
             catch {
                 MessageBox.Show(txtsil.Text+" id numaralı araba yok ", "İD ELSİK");
+                txtsil.Text = "";
             }
         }
     }

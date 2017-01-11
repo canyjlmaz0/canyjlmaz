@@ -39,10 +39,20 @@ namespace deneme.Pages
             kirala.Dispose();
             baglanti.Close();
             MessageBox.Show("araç ekleme yapıldı","EKLEME İŞLEMİ ");
-             }
+                txteklefiyat.Text = "";
+                txteklemarka.Text = "";
+                txteklemodel.Text = "";
+                txteklerenk.Text = "";
+                txtekleyil.Text = "";
+            }
             catch
             {
-                MessageBox.Show("LÜTFEN VERİLERİ DÜZGÜN DOLDURUNUZ" , " İD HATALI");
+                MessageBox.Show("LÜTFEN VERİLERİ DÜZGÜN DOLDURUNUZ" , "HATALI");
+                txteklefiyat.Text = "";
+                txteklemarka.Text = "";
+                txteklemodel.Text = "";
+                txteklerenk.Text = "";
+                txtekleyil.Text = "";
             }
         }
     }

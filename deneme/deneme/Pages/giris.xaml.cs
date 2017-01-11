@@ -66,15 +66,22 @@ namespace deneme.Pages
 
         private void datagrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DataRowView row = (DataRowView)datagrid.SelectedItems[0];
-            sec = row["id"].ToString();
-            MessageBox.Show(sec + " id numaralı aracı  seçtiniz" , " secilen araç");
+            try
+            {
+                DataRowView row = (DataRowView)datagrid.SelectedItems[0];
+                sec = row["id"].ToString();
+                MessageBox.Show(sec + " id numaralı aracı  seçtiniz", " secilen araç");
 
 
-            kirala frm = new kirala();
-            frm.txtserino.Text = sec.ToString();
-            //ordaki labeli sec değişkenine atıyom söyle yapıcan bak
-            
+                kirala frm = new kirala();
+                frm.txtserino.Text = sec.ToString();
+                datagrid.RowBackground = new SolidColorBrush(Colors.Red);
+            }
+            catch
+            {
+
+                MessageBox.Show("1 DEN FAZLA ARAÇ SEÇMEYİNİZ","UYARI HATASI");
+            }
 
         }
        
