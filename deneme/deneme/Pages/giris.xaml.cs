@@ -60,7 +60,7 @@ namespace deneme.Pages
             }
         }
 
-        public string sec;
+        public string id;
         
         
 
@@ -69,12 +69,17 @@ namespace deneme.Pages
             try
             {
                 DataRowView row = (DataRowView)datagrid.SelectedItems[0];
-                sec = row["id"].ToString();
-                MessageBox.Show(sec + " id numaralı aracı  seçtiniz", " secilen araç");
+                id = row["id"].ToString();
+                string musteri= row["m_ad"].ToString();
+                string marka = row["marka"].ToString();
+                string model = row["model"].ToString();
+                string yil = row["yil"].ToString();
+                string renk = row["renk"].ToString();
+                MessageBox.Show(id+" numaralı "+marka+" " +model+ " " +renk+" "+yil+"  aracı  seçtiniz", " secilen araç");
 
 
                 kirala frm = new kirala();
-                frm.txtserino.Text = sec.ToString();
+                frm.txtserino.Text = id.ToString();
                 datagrid.RowBackground = new SolidColorBrush(Colors.Red);
             }
             catch
