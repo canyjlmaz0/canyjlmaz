@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 11 Oca 2017, 00:04:05
+-- Üretim Zamanı: 03 Oca 2017, 16:02:04
 -- Sunucu sürümü: 10.1.19-MariaDB
 -- PHP Sürümü: 7.0.13
 
@@ -32,7 +32,6 @@ CREATE TABLE `galari` (
   `model` varchar(20) NOT NULL,
   `renk` varchar(20) NOT NULL,
   `yil` int(11) NOT NULL,
-  `fiyat` int(11) NOT NULL,
   `satimtarih` date NOT NULL,
   `teslimtarih` date NOT NULL,
   `gün` int(11) NOT NULL,
@@ -47,10 +46,9 @@ CREATE TABLE `galari` (
 -- Tablo döküm verisi `galari`
 --
 
-INSERT INTO `galari` (`id`, `marka`, `model`, `renk`, `yil`, `fiyat`, `satimtarih`, `teslimtarih`, `gün`, `m_ad`, `m_soyad`, `m_adres`, `m_no`, `m_tc`) VALUES
-(1, 'bmw', '530', 'beyaz', 2016, 0, '2017-01-03', '2017-01-11', 0, '', '', '', 0, 0),
-(3, 'audi', 'a7', 'k?rm?z?', 2000, 0, '0000-00-00', '0000-00-00', 20, 'can', 'yilmaz', 'sinop', 56, 45321),
-(8, 'bmw', 'm5', 'kirmizi', 2016, 75000, '0000-00-00', '0000-00-00', 0, '', '', '', 0, 0);
+INSERT INTO `galari` (`id`, `marka`, `model`, `renk`, `yil`, `satimtarih`, `teslimtarih`, `gün`, `m_ad`, `m_soyad`, `m_adres`, `m_no`, `m_tc`) VALUES
+(1, 'bmw', '530', 'beyaz', 2016, '2017-01-03', '2017-01-11', 0, '', '', '', 0, 0),
+(3, 'audi', 'a7', 'k?rm?z?', 2000, '2017-01-16', '2017-01-20', 0, '', '', '', 0, 0);
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -70,7 +68,7 @@ ALTER TABLE `galari`
 -- Tablo için AUTO_INCREMENT değeri `galari`
 --
 ALTER TABLE `galari`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
