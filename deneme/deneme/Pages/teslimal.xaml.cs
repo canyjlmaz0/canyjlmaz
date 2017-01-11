@@ -35,15 +35,15 @@ namespace deneme.Pages
             try
             {
                 baglanti.Open();
-                MySqlCommand kirala = new MySqlCommand("UPDATE galari set  satimtarih='" + sayi + "', teslimtarih='" + sayi + "',gün=" + sayi + ",m_ad='" + bos.ToString() + "',m_soyad='" + bos.ToString()  +"', m_adres = '" + bos.ToString() + "'  , m_no=" + sayi + " , m_tc=" + sayi + "  where id=" + txtteslim.Text + "", baglanti);
-                kirala.ExecuteNonQuery();
-                kirala.Dispose();
+                MySqlCommand TESLİMAL = new MySqlCommand("UPDATE galari set  satimtarih='" + sayi + "', teslimtarih='" + sayi + "',gün=" + sayi + ",m_ad='" + bos.ToString() + "',m_soyad='" + bos.ToString()  +"', m_adres = '" + bos.ToString() + "'  , m_no=" + sayi + " , m_tc=" + sayi + "  where id=" + txtteslim.Text + "", baglanti);
+                TESLİMAL.ExecuteNonQuery();
+                TESLİMAL.Dispose();
                 baglanti.Close();
-                MessageBox.Show("araç teslim alma başarıyla yapıldı");
+                MessageBox.Show("araç teslim alma başarıyla yapıldı" , "TESLİM ALINDI");
             }
             catch
             {
-                MessageBox.Show(txtteslim.Text+" id li araba olmadığından teslim alınamadı");
+                MessageBox.Show(txtteslim.Text+" id li araba olmadığından teslim alınamadı" ,"ARAÇ VERİSİ EKSİK");
             }
         }
     }

@@ -44,10 +44,10 @@ namespace deneme.Pages
                 kirala.ExecuteNonQuery();
                 kirala.Dispose();
                 baglanti.Close();
-                MessageBox.Show("kiralama yapıldı");
+                MessageBox.Show("kiralama yapıldı","ARA. KİRALANDI");
             }
             catch {
-                MessageBox.Show("lütfen gerkeli yerleri doldurunuz.");
+                MessageBox.Show("lütfen gerkeli yerleri doldurunuz. (TARİH ÖRN(2015))"  , "BOŞ VERİ BIRAKMAYINIZ" );
             }
         }
     }

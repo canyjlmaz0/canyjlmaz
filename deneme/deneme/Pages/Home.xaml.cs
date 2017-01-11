@@ -89,7 +89,7 @@ namespace deneme.Pages
                 //--------------------------------------
             }
             else {
-                MessageBox.Show("kullanıcı adı , şifre  veya güvenlik kodu yanlış tekrar deneyin");
+                MessageBox.Show("kullanıcı adı , şifre  veya güvenlik kodu yanlış tekrar deneyin" , "HATA" );
                 txtkod.Text = "";
                 kad.Text = "";
                 sifre.Password = "";

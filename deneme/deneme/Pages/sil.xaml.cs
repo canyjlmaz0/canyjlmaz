@@ -43,10 +43,10 @@ namespace deneme.Pages
                 sil.ExecuteNonQuery();
                 sil.Dispose();
                 baglanti.Close();
-                MessageBox.Show("araç silindi.");
+                MessageBox.Show("araç silindi." ,"SİLME İŞLEMİ TAMAMLANDI");
             }
             catch {
-                MessageBox.Show(txtsil.Text+" id numaralı araba yok ");
+                MessageBox.Show(txtsil.Text+" id numaralı araba yok ", "İD ELSİK");
             }
         }
     }

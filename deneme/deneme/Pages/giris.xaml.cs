@@ -36,6 +36,10 @@ namespace deneme.Pages
             deneme.Items.Add("nissan");
             deneme.Items.Add("tofaş");
 
+           
+            
+
+
         }
         private void deneme_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -64,7 +68,7 @@ namespace deneme.Pages
         {
             DataRowView row = (DataRowView)datagrid.SelectedItems[0];
             sec = row["id"].ToString();
-            MessageBox.Show(sec + " id numaralı aracı  seçtiniz");
+            MessageBox.Show(sec + " id numaralı aracı  seçtiniz" , " secilen araç");
 
 
             kirala frm = new kirala();

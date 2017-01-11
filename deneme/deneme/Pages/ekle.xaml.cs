@@ -38,11 +38,11 @@ namespace deneme.Pages
             kirala.ExecuteNonQuery();
             kirala.Dispose();
             baglanti.Close();
-            MessageBox.Show("araç ekleme yapıldı");
+            MessageBox.Show("araç ekleme yapıldı","EKLEME İŞLEMİ ");
              }
             catch
             {
-                MessageBox.Show("LÜTFEN VERİLERİ DÜZGÜN DOLDURUNUZ");
+                MessageBox.Show("LÜTFEN VERİLERİ DÜZGÜN DOLDURUNUZ" , " İD HATALI");
             }
         }
     }
