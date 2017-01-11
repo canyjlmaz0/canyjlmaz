@@ -45,9 +45,29 @@ namespace deneme.Pages
                 kirala.Dispose();
                 baglanti.Close();
                 MessageBox.Show("kiralama yapıldı","ARA. KİRALANDI");
+
+                txtad.Text = "";
+                txtadres.Text = "";
+                txtgün.Text = "";
+                txtno.Text = "";
+                txtsatimtarih.Text = "";
+                txtserino.Text = "";
+                txtsoyad.Text = "";
+                txttc.Text = "";
+                txtteslimtarih.Text = "";
+                
             }
             catch {
                 MessageBox.Show("lütfen gerkeli yerleri doldurunuz. (TARİH ÖRN(2015))"  , "BOŞ VERİ BIRAKMAYINIZ" );
+                txtad.Text = "";
+                txtadres.Text = "";
+                txtgün.Text = "";
+                txtno.Text = "";
+                txtsatimtarih.Text = "";
+                txtserino.Text = "";
+                txtsoyad.Text = "";
+                txttc.Text = "";
+                txtteslimtarih.Text = "";
             }
         }
     }

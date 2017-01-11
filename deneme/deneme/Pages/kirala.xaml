@@ -38,18 +38,18 @@
         <Label Grid.Column="0" Grid.Row="10" HorizontalAlignment="Right" Margin="0,10,0,0">ADRES :</Label>
         <Label Grid.Column="0" Grid.Row="11" HorizontalAlignment="Right" Margin="0,10,0,0">NUMARA :</Label>
         <Label Grid.Column="0" Grid.Row="12" HorizontalAlignment="Right" Margin="0,10,0,0">TC NO :</Label>
-        
 
-        <TextBox Grid.Column="1" Grid.Row="4" Name="txtserino" Margin="150,10,0,0"></TextBox>
 
-        <DatePicker  Grid.Column="1" Grid.Row="5" Name="txtsatimtarih" FontSize="30" Background="Gray"  Margin="150,10,0,0"></DatePicker>
-        <DatePicker Grid.Column="1" Grid.Row="6" Name="txtteslimtarih" FontSize="30" Background="Gray"  Margin="150,10,0,0"></DatePicker>
-        <TextBox Grid.Column="1" Grid.Row="7" Name="txtgün" FontSize="30" Background="Gray"  Margin="150,10,0,0"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="8" Name="txtad" FontSize="30" Background="Gray"  Margin="150,10,0,0"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="9" Name="txtsoyad" FontSize="30" Background="Gray"  Margin="150,10,0,0"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="10" Name="txtadres" FontSize="30" Background="Gray"  Margin="150,10,0,0"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="11" Name="txtno" FontSize="30" Background="Gray"  Margin="150,10,0,0"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="12" Name="txttc" FontSize="30" Background="Gray"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="4" Name="txtserino" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
+
+        <DatePicker  Grid.Column="1" Grid.Row="5" Name="txtsatimtarih" FontSize="15" Background="Gray"  Margin="150,10,0,0"></DatePicker>
+        <DatePicker Grid.Column="1" Grid.Row="6" Name="txtteslimtarih" FontSize="15" Background="Gray"  Margin="150,10,0,0"></DatePicker>
+        <TextBox Grid.Column="1" Grid.Row="7" Name="txtgün" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="8" Name="txtad" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="9" Name="txtsoyad" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="10" Name="txtadres" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="11" Name="txtno" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
+        <TextBox Grid.Column="1" Grid.Row="12" Name="txttc" FontSize="15" Background="Gray"  Margin="150,10,0,0"></TextBox>
         <Button Grid.Column="0" Grid.Row="13" Grid.ColumnSpan="2" Margin="5" Background="gray" Click="Button_Click">KİRALAMA İŞLEMİNİ TAMAMLA</Button>
 
     </Grid>
